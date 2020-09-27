@@ -5,7 +5,7 @@
 @import 'libs/breakpoints';
 @import 'libs/html-grid';
 @import 'fontawesome-all.min.css';
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,800,800italic');
+@import url('https://fonts.googleapis.com/css2?family=Grandstander:wght@100;200;300;400&display=swap');
 
 /*
 	Spectral by HTML5 UP
@@ -41,7 +41,7 @@
 		padding: 0;
 		border: 0;
 		font-size: 100%;
-		font: inherit;
+		font-family: 'Grandstander', cursive;
 		vertical-align: baseline;
 	}
 
@@ -111,7 +111,7 @@
 		}
 
 	body, .main-body {
-		background: _palette(bg);
+		background: #E95F42;
 
 		// Stops initial animations until page loads.
 			&.is-preload {
@@ -319,7 +319,7 @@
 
 	header {
 		p {
-			color: _palette(fg-light);
+			color: white;
 			position: relative;
 			top: -0.25em;
 		}
@@ -654,6 +654,17 @@
 			}
 		}
 	}
+
+	.logo {
+		width: 40%;
+	}
+
+	@media only screen and (max-width: 600px) {
+		.logo {
+			width: 90%;
+		}
+	  }
+
 
 /* List */
 
@@ -1128,8 +1139,10 @@
 
 /* Wrapper */
 
+/* home page background */
+
 	@mixin wrapper($p) {
-		background-color: _palette($p, bg);
+		background-color: #E95F42;
 		color: _palette($p, fg);
 
 		// Basic
@@ -1630,8 +1643,7 @@
 		}
 
 		.more {
-			@include vendor('transition', ('transform 0.75s ease', 'opacity 0.75s ease'));
-			@include vendor('transition-delay', '3.5s');
+			@include vendor('transition', ('transform 0.2s ease', 'opacity 0.2s ease'));
 			@include vendor('transform', 'translateY(0)');
 			border: none;
 			bottom: 0;
@@ -1669,9 +1681,8 @@
 		&:after {
 			@include vendor('pointer-events', 'none');
 			@include vendor('transition', 'opacity #{_duration(fadein)} ease-in-out');
-			@include vendor('transition-delay', '1.25s');
 			content: '';
-			background: _palette(bg);
+			background: #E95F42;
 			display: block;
 			width: 100%;
 			height: 100%;
@@ -1848,7 +1859,7 @@
 		}
 
 		.copyright {
-			color: _palette(fg-light);
+			color: white;
 			font-size: 0.8em;
 			letter-spacing: _size(letter-spacing-alt);
 			list-style: none;
@@ -1908,7 +1919,7 @@
 		}
 
 		#footer {
-			background-color: darken(transparentize(_palette(bg), 0.1), 8);
+			background-color: darken(transparentize(#A9503D, 0.1), 1);
 		}
 	}
 

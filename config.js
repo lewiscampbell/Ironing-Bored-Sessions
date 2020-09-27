@@ -8,21 +8,21 @@ module.exports = {
   manifestDisplay: 'standalone',
   manifestIcon: 'src/assets/img/website-icon.png',
   pathPrefix: `/gatsby-starter-spectral/`, // This path is subpath of your hosting https://domain/portfolio
-  heading: 'Anubhav Srivastava',
-  subHeading: 'Full time Web Developer. Part time Open source contributor  ',
+  heading: 'Ironing Bored Sessions',
+  subHeading: 'SHOWCASING A RANGE OF MUSIC AND DJS FROM BEHIND THE IRONING BOARD.',
   // social
   socialLinks: [
     {
       style: 'brands',
-      icon: 'fa-github',
-      name: 'Github',
-      url: 'https://github.com/anubhavsrivastava',
+      icon: 'fa-youtube',
+      name: 'youtube',
+      url: 'https://www.youtube.com/channel/UCaEvm31WsrxlLUOvnss1wZA',
     },
     {
       style: 'brands',
-      icon: 'fa-twitter',
-      name: 'Twitter',
-      url: 'https://twitter.com/onlyanubhav',
+      icon: 'fa-instagram',
+      name: 'instagram',
+      url: 'https://www.instagram.com/ironingboredsessions/',
     },
     {
       style: 'solid',
