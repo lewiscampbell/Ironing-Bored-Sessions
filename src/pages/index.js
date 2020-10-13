@@ -16,7 +16,7 @@ const IndexPage = () => (
         <img class='logo' src={logo} alt="logo" />
         <br/>
         <br/>
-        <p>Showcasing a range of music and DJs from behind the ironing board.</p>
+        <p>Born out of the boredom of lockdown, Ironing Bored Sessions is a platform for DJ’s to share their mixes with the world.</p>
         <ul className="actions special">
           <li>
             <Scroll type="id" element="three">
@@ -40,7 +40,6 @@ const IndexPage = () => (
 						<div className="row gtr-50 gtr-uniform">
             <iframe 
                 className="col-12"
-                height="650px"
 								id="player"
 								type="text/html"
 								src="https://www.youtube.com/embed/TsdAereKcHA"
@@ -61,7 +60,6 @@ const IndexPage = () => (
 						<div className="row gtr-50 gtr-uniform">
 							<iframe 
                 className="col-4"
-                height="350px"
 								id="player"
 								type="text/html"
 								src="https://www.youtube.com/embed/eVAxrwm56FY"
@@ -69,7 +67,6 @@ const IndexPage = () => (
 							</iframe>
 							<iframe 
                 className="col-4"
-                height="350px"
 								id="player"
 								type="text/html"
 								src="https://www.youtube.com/embed/arU-8hjHL0Y"
@@ -77,7 +74,6 @@ const IndexPage = () => (
 							</iframe>
               <iframe 
                 className="col-4"
-                height="350px"
 								id="player"
 								type="text/html"
 								src="https://www.youtube.com/embed/TvPUvqdYUj8"
@@ -85,7 +81,6 @@ const IndexPage = () => (
 							</iframe>
               <iframe 
                 className="col-4"
-                height="350px"
 								id="player"
 								type="text/html"
 								src="https://www.youtube.com/embed/pinEjyQXgOQ"
@@ -93,7 +88,6 @@ const IndexPage = () => (
 							</iframe>
 							<iframe 
                 className="col-4"
-                height="350px"
 								id="player"
 								type="text/html"
 								src="https://www.youtube.com/embed/HU30rQWh-V8"
@@ -101,7 +95,6 @@ const IndexPage = () => (
 							</iframe>
               <iframe 
                 className="col-4"
-                height="350px"
 								id="player"
 								type="text/html"
 								src="https://www.youtube.com/embed/6ly3QRfGUZM"
@@ -127,7 +120,7 @@ const IndexPage = () => (
             <br/>
             Send us a mix.
           </p>
-          <a href="/#" className="button fit primary">
+          <a href="mailto:ironingboredsessions@gmail.com" className="button fit primary">
               Email
             </a>
         </header>
