@@ -1,7 +1,7 @@
 module.exports = {
-  siteTitle: 'Gatsby Starter Spectral', // <title>
+  siteTitle: 'Ironing Bored Sessions', // <title>
   manifestName: 'Spectral',
-  manifestShortName: 'Landing', // max 12 characters
+  manifestShortName: 'Ironing', // max 12 characters
   manifestStartUrl: '/',
   manifestBackgroundColor: '#663399',
   manifestThemeColor: '#663399',
@@ -9,7 +9,7 @@ module.exports = {
   manifestIcon: 'src/assets/img/website-icon.png',
   pathPrefix: `/gatsby-starter-spectral/`, // This path is subpath of your hosting https://domain/portfolio
   heading: 'Ironing Bored Sessions',
-  subHeading: 'SHOWCASING A RANGE OF MUSIC AND DJS FROM BEHIND THE IRONING BOARD.',
+  subHeading: 'Born out of the boredom of lockdown, Ironing Bored Sessions is a platform for DJ’s to share their mixes with the world.',
   // social
   socialLinks: [
     {
