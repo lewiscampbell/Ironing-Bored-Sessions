@@ -1,6 +1,6 @@
 module.exports = {
   siteTitle: 'Ironing Bored Sessions', // <title>
-  manifestName: 'Spectral',
+  manifestName: 'Ironing Bored Sessions',
   manifestShortName: 'Ironing', // max 12 characters
   manifestStartUrl: '/',
   manifestBackgroundColor: '#663399',
