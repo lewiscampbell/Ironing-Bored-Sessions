@@ -5,7 +5,7 @@
 @import 'libs/breakpoints';
 @import 'libs/html-grid';
 @import 'fontawesome-all.min.css';
-@import url('https://fonts.googleapis.com/css2?family=Grandstander:wght@100;200;300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@100;200;300;400&display=swap');
 
 /*
 	Spectral by HTML5 UP
@@ -41,7 +41,7 @@
 		padding: 0;
 		border: 0;
 		font-size: 100%;
-		font-family: 'Grandstander', cursive;
+		font-family: 'Karla', cursive;
 		vertical-align: baseline;
 	}
 
@@ -111,7 +111,7 @@
 		}
 
 	body, .main-body {
-		background: #E95F42;
+		background: _palette(bg);
 
 		// Stops initial animations until page loads.
 			&.is-preload {
@@ -175,7 +175,6 @@
 		letter-spacing: _size(letter-spacing-alt);
 		line-height: 1em;
 		margin: 0 0 (_size(element-margin) * 0.5) 0;
-		text-transform: uppercase;
 
 		a {
 			color: inherit;
@@ -183,8 +182,12 @@
 		}
 	}
 
+	h1 {
+		font-size: 2.35em;
+	}
+
 	h2 {
-		font-size: 1.35em;
+		font-size: 1.75em;
 		line-height: 1.75em;
 
 		@include breakpoint('<=small') {
@@ -319,7 +322,7 @@
 
 	header {
 		p {
-			color: white;
+			color: _palette(fg-light);
 			position: relative;
 			top: -0.25em;
 		}
@@ -655,17 +658,6 @@
 		}
 	}
 
-	.logo {
-		width: 25%;
-	}
-
-	@media only screen and (max-width: 600px) {
-		.logo {
-			width: 75%;
-		}
-	  }
-
-
 /* List */
 
 	ol {
@@ -837,6 +829,7 @@
 	.table-wrapper {
 		-webkit-overflow-scrolling: touch;
 		overflow-x: auto;
+		width: 100%;
 	}
 
 	table {
@@ -933,7 +926,6 @@
 		padding: 0 2.75em;
 		text-align: center;
 		text-decoration: none;
-		text-transform: uppercase;
 		white-space: nowrap;
 		overflow: hidden;
 		text-overflow: ellipsis;
@@ -1139,24 +1131,22 @@
 
 /* Wrapper */
 
-/* home page background */
-
 	@mixin wrapper($p) {
-		background-color: #E95F42;
-		color: _palette($p, fg);
+		background-color: white; /* Home background */
+		color: black;
 
 		// Basic
 
 			strong, b {
-				color: _palette($p, fg-bold);
+				color: black;
 			}
 
 			h2, h3, h4, h5, h6 {
-				color: _palette($p, fg-bold);
+				color: Black;
 			}
 
 			hr {
-				border-color: _palette($p, border);
+				border-color: black;
 			}
 
 			blockquote {
@@ -1180,7 +1170,7 @@
 					}
 
 					p {
-						color: _palette($p, fg);
+						color: Black;
 					}
 				}
 			}
@@ -1308,7 +1298,7 @@
 			button,
 			.button {
 				box-shadow: inset 0 0 0 2px _palette($p, border);
-				color: _palette($p, fg-bold);
+				color: black;
 
 				&:hover {
 					background-color: _palette($p, border-bg);
@@ -1405,7 +1395,7 @@
 		@include vendor('transform', 'translateX(20em)');
 		@include vendor('transition', 'transform #{_duration(menu)} ease');
 		-webkit-overflow-scrolling: touch;
-		background: #D8654D;
+		background: #F73535;
 		color: _palette(accent1, fg-bold);
 		height: 100%;
 		max-width: 80%;
@@ -1483,11 +1473,13 @@
 		}
 	}
 
+
+
 /* Header */
 
 	#header {
 		@include vendor('transition', 'background-color #{_duration(transitions)} ease');
-		background: _palette(bg);
+		background: transparent;
 		height: 3em;
 		left: 0;
 		line-height: 3em;
@@ -1595,11 +1587,19 @@
 		@include vendor('flex-direction', 'column');
 		@include vendor('justify-content', 'center');
 		cursor: default;
-		height: 100vh;
+		height: 10vh;
 		min-height: 35em;
 		overflow: hidden;
 		position: relative;
 		text-align: center;
+
+		h1 {
+			display: table; /* keep the background color wrapped tight */
+			margin: 0px auto 10px auto; /* keep the table centered */
+			padding: 10px;
+			background-color: #F73535;
+			letter-spacing: 3px;
+		}
 
 		h2 {
 			@include vendor('transform', 'scale(1)');
@@ -1634,25 +1634,19 @@
 		}
 
 		p {
-			letter-spacing: _size(letter-spacing-alt);
-			text-transform: uppercase;
-			margin-right: 40vh;
-			margin-left: 40vh;
+			letter-spacing: 2px;
+			display: table; /* keep the background color wrapped tight */
+			margin: 0px auto 30px auto; /* keep the table centered */
+			padding: 5px;
 
 			a {
 				color: inherit;
 			}
 		}
 
-		@media only screen and (max-width: 600px) {
-			p {
-				margin-right: 0px;
-				margin-left: 0px;
-			}
-		  }
-
 		.more {
-			@include vendor('transition', ('transform 0.2s ease', 'opacity 0.2s ease'));
+			@include vendor('transition', ('transform 0.75s ease', 'opacity 0.75s ease'));
+			@include vendor('transition-delay', '3.5s');
 			@include vendor('transform', 'translateY(0)');
 			border: none;
 			bottom: 0;
@@ -1690,8 +1684,9 @@
 		&:after {
 			@include vendor('pointer-events', 'none');
 			@include vendor('transition', 'opacity #{_duration(fadein)} ease-in-out');
+			@include vendor('transition-delay', '1.25s');
 			content: '';
-			background: #E95F42;
+			background: _palette(bg);
 			display: block;
 			width: 100%;
 			height: 100%;
@@ -1737,7 +1732,7 @@
 			}
 
 			&:after {
-				opacity: 1;
+				opacity: 0;
 			}
 		}
 	}
@@ -1848,34 +1843,6 @@
 		}
 	}
 
-
-	/* Video Height */
-
-	.col-12 {
-	
-		height: 650px;
-
-	}
-
-	@media only screen and (max-width: 600px) {
-		.col-12 {
-			height: 300px;
-		}
-	  }
-
-	.col-4 {
-	
-		height: 350px;
-
-	}
-
-	@media only screen and (max-width: 600px) {
-		.col-4 {
-			height: 200px;
-		}
-	  }
-
-
 /* Footer */
 
 	#footer {
@@ -1896,7 +1863,7 @@
 		}
 
 		.copyright {
-			color: white;
+			color: _palette(fg-light);
 			font-size: 0.8em;
 			letter-spacing: _size(letter-spacing-alt);
 			list-style: none;
@@ -1947,7 +1914,7 @@
 
 	body.landing, .main-body.landing {
 		#page-wrapper {
-			@include vendor('background-image', ('linear-gradient(to top, rgba(0,0,0,0.5), rgba(0,0,0,0.5))', 'url("../images/banner.jpg")'));
+			@include vendor('background-image', ('linear-gradient(to top, rgba(0,0,0,0.2), rgba(0,0,0,0.2))', 'url("../images/banner.jpg")'));
 			background-attachment: fixed;
 			background-position: center center;
 			background-repeat: no-repeat;
@@ -1956,7 +1923,7 @@
 		}
 
 		#footer {
-			background-color: darken(transparentize(#A9503D, 0.1), 1);
+			background-color: darken(transparentize(#F73535, 0.3), 8);
 		}
 	}
 

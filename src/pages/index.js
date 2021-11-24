@@ -4,128 +4,163 @@ import Layout from '../components/Layout';
 
 import Scroll from '../components/Scroll';
 
-import pic1 from '../assets/images/pic01.jpg';
-import pic2 from '../assets/images/pic02.jpg';
-import pic3 from '../assets/images/pic03.jpg';
-import logo from '../assets/images/IBSessions_logo.png';
+import certificate2 from '../assets/images/certificate2.jpg';
 import config from '../../config';
 const IndexPage = () => (
   <Layout>
     <section id="banner">
       <div className="inner">
-        <img class='logo' src={logo} alt="logo" />
-        <br/>
-        <br/>
-        <p>Born out of the boredom of lockdown, Ironing Bored Sessions is a platform for DJ’s to share their mixes with the world.</p>
-        <ul className="actions special">
+        <h1>{config.heading}</h1>
+        <p>{config.subHeading}</p>
+      </div>
+      <Scroll type="id" element="one">
+        <a href="#one" className="more">
+          Learn More
+        </a>
+      </Scroll>
+    </section>
+    
+    {/*
+
+    <section id="one" className="wrapper style1 special">
+      <div className="inner">
+        <header className="major">
+          <h2>
+            Arcu aliquet vel lobortis ata nisl
+            <br />
+            eget augue amet aliquet nisl cep donec
+          </h2>
+          <p>
+            Aliquam ut ex ut augue consectetur interdum. Donec amet imperdiet
+            eleifend
+            <br />
+            fringilla tincidunt. Nullam dui leo Aenean mi ligula, rhoncus
+            ullamcorper.
+          </p>
+        </header>
+        <ul className="icons major">
           <li>
-            <Scroll type="id" element="three">
-              <a href="/#" className="button primary">
-                See Mixes
-              </a>
-            </Scroll>
+            <span className="icon fa-gem major style1">
+              <span className="label">Lorem</span>
+            </span>
+          </li>
+          <li>
+            <span className="icon fa-heart major style2">
+              <span className="label">Ipsum</span>
+            </span>
+          </li>
+          <li>
+            <span className="icon solid fa-code major style3">
+              <span className="label">Dolor</span>
+            </span>
           </li>
         </ul>
       </div>
     </section>
 
+    */}
+
 
     <section id="three" className="wrapper style3 special">
       <div className="inner">
         <header className="major">
-          <h2>Latest Mix</h2>
+          <h2>Our Mission</h2>
+          <p>
+            We aim to give children the aspiration and opportunity through education, especially girls, 
+            <br />
+            in Malawi and Uganda, to become community leaders and role models who will improve
+            <br />
+            themselves and their communities.
+          </p>
         </header>
 
-        <div className="box alt">
-						<div className="row gtr-50 gtr-uniform">
-            <iframe 
-                className="col-12"
-								id="player"
-								type="text/html"
-								src="https://www.youtube.com/embed/TsdAereKcHA"
-								frameborder="0">
-							</iframe>
-						</div>
+
+        <ul className="features">
+          <li>
+            <h3>Sponser a Child</h3>
+            <p>
+            One extra year of school increases earnings by up to 10%: this can be double for women.
+            </p>
+          </li>
+          <li>
+            <h3>Sponser a Teacher</h3>
+            <p>
+            One more year of education decreases, by at least 10%, the probability of a girl giving birth when she is still a teenager. - (World Bank) 
+            </p>
+          </li>
+        </ul>
+
+        <br/>
+
+            <blockquote>'There are so many children who are not attending school, however, currently 48 children who are in dire needs have been identified from the surrounding villages. If these children get support, I am very certain that their future will be brighter’. - Head Teacher</blockquote>
+
+        <br/>
+
+            <div><span className="image fit"><img src={certificate2} alt="" /></span></div>
+
+        <br/>
+
+        <div className="table-wrapper">
+          <h2>How Can You Help?</h2>
+						<table>
+							<thead>
+								<tr>
+									<th>Help</th>
+									<th>Description</th>
+									<th>Cost</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Sponser a Child for a Year (Primary School)</td>
+									<td>Fees, uniform, equipment, food</td>
+									<td>£50.00</td>
+								</tr>
+								<tr>
+									<td>Sponser a Child for a Year (Secondary School)</td>
+									<td>Fees, uniform, equipment, food</td>
+									<td>£100.00</td>
+								</tr>
+								<tr>
+									<td>Sponsor a Teacher for a Year</td>
+									<td>Primary School</td>
+									<td>£1000.00</td>
+								</tr>
+								<tr>
+									<td>Sponsor a Teacher for a Year</td>
+									<td>Secondary School</td>
+									<td>£1800.00</td>
+								</tr>
+							</tbody>
+						</table>
+
+            <br/>
+
+            <a href="/Donate" className="button fit">
+              Learn More Here >
+            </a>
+
 					</div>
-
-          <br />
-          <br />
-
-        <header className="major">
-          <h2>Other Mixes</h2>
-        </header>
-
-        <section>
-					<div className="box alt">
-						<div className="row gtr-50 gtr-uniform">
-							<iframe 
-                className="col-4"
-								id="player"
-								type="text/html"
-								src="https://www.youtube.com/embed/eVAxrwm56FY"
-								frameborder="0">
-							</iframe>
-							<iframe 
-                className="col-4"
-								id="player"
-								type="text/html"
-								src="https://www.youtube.com/embed/arU-8hjHL0Y"
-								frameborder="0">
-							</iframe>
-              <iframe 
-                className="col-4"
-								id="player"
-								type="text/html"
-								src="https://www.youtube.com/embed/TvPUvqdYUj8"
-								frameborder="0">
-							</iframe>
-              <iframe 
-                className="col-4"
-								id="player"
-								type="text/html"
-								src="https://www.youtube.com/embed/pinEjyQXgOQ"
-								frameborder="0">
-							</iframe>
-							<iframe 
-                className="col-4"
-								id="player"
-								type="text/html"
-								src="https://www.youtube.com/embed/HU30rQWh-V8"
-								frameborder="0">
-							</iframe>
-              <iframe 
-                className="col-4"
-								id="player"
-								type="text/html"
-								src="https://www.youtube.com/embed/6ly3QRfGUZM"
-								frameborder="0">
-							</iframe>
-						</div>
-					</div>
-				</section>
-
-<br />
-
-<a href='https://www.youtube.com/channel/UCaEvm31WsrxlLUOvnss1wZA' target="_blank" className="button">See all mixes on Youtube</a>
 
       </div>
+
+
     </section>
+
 
     <section id="cta" className="wrapper style4">
       <div className="inner">
         <header>
-          <h2>Do you mix?</h2>
-          <p>
-            Want to feature on Ironing Bored Sessions? 
-            <br/>
-            Send us a mix.
-          </p>
-          <a href="mailto:ironingboredsessions@gmail.com" className="button fit primary">
-              Email
+          <h2>Donate Here</h2>
+          <a href="/Donate" className="button fit primary">
+              Donate!
             </a>
         </header>
       </div>
     </section>
+
+
+
   </Layout>
 );
 

@@ -3,20 +3,26 @@ import config from '../../config';
 export default function Footer() {
   return (
     <footer id="footer">
+
+{/*
+
       <ul className="icons">
         {config.socialLinks.map(social => {
           const { style, icon, name, url } = social;
           return (
             <li key={url}>
-              <a target="_blank" href={url} className={`icon ${style} ${icon}`}>
+              <a href={url} className={`icon ${style} ${icon}`}>
                 <span className="label">{name}</span>
               </a>
             </li>
           );
         })}
       </ul>
+
+      */}
+
       <ul className="copyright">
-        <li>&copy; Ironing Bored Sessions</li>
+        <li>Young Africa Empowered</li>
       </ul>
     </footer>
   );
